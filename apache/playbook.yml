@@ -9,5 +9,5 @@
         - httpd
         - httpd-devel
 
-      - name: Enable Apache.
-        service: name=httpd state=started enabled=yes
+    - name: Enable Apache.
+      service: name=httpd state=started enabled=yes
