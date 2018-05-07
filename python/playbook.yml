@@ -15,5 +15,5 @@
       state: latest
 
   - name: Install Python Libraries with PIP
-      pip:
-        name: NumPy, SciPy, ansible, apache-libcloud, matplotlib
+    pip:
+      name: NumPy, SciPy, ansible, apache-libcloud, matplotlib
