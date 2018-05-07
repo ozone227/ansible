@@ -2,18 +2,18 @@
 - hosts: centos
   become: yes
 
-- tasks:
-  - name: Install Python
-    yum: name={{ item }} state=present
-    with_items:
-      - python
-      - python-devel
+  tasks:
+    - name: Install Python
+      yum: name={{ item }} state=present
+      with_items:
+        - python
+        - python-devel
 
-  - name: Install PIP
-    easy_install:
-      name: pip
-      state: latest
+    - name: Install PIP
+      easy_install:
+        name: pip
+        state: latest
 
-  - name: Install Python Libraries with PIP
-    pip:
-      name: NumPy, SciPy, ansible, apache-libcloud, matplotlib
+    - name: Install Python Libraries with PIP
+      pip:
+        name: NumPy, SciPy, ansible, apache-libcloud, matplotlib
