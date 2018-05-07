@@ -5,4 +5,7 @@
   tasks:
     - name: Install Dev Tools
       yum: name={{ item }} state=present
-      with_items: gcc gcc++ kernel-headers
+      with_items:
+        - gcc
+        - gcc++
+        - kernel-headers
