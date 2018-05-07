@@ -10,9 +10,9 @@
       - python-devel
 
   - name: Install PIP
-      easy_install:
-        name: pip
-        state: latest
+    easy_install:
+      name: pip
+      state: latest
 
   - name: Install Python Libraries with PIP
       pip:
