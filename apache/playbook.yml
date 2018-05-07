@@ -1,5 +1,5 @@
 ---
-- hosts: krueger
+- hosts: webservers
   become: yes
 
   tasks:
