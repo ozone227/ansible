@@ -3,17 +3,17 @@
   become: yes
 
 - tasks:
-  - name: "Install Python"
+  - name: Install Python
     yum: name={{ item }} state=present
     with_items:
       - python
       - python-devel
 
-  - name: "Install PIP"
+  - name: Install PIP
       easy_install:
-      name: pip
-      state: latest
+        name: pip
+        state: latest
 
-  - name: "Install Python Libraries with Pip"
+  - name: Install Python Libraries with PIP
       pip:
         name: NumPy, SciPy, ansible, apache-libcloud, matplotlib
