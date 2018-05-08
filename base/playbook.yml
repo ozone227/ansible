@@ -9,3 +9,12 @@
         - gcc
         - gcc-c++
         - kernel-headers
+
+- hosts: ubuntu
+  become: yes
+
+  tasks:
+    - name: Install Dev Tools
+      apt: name={{ item }} state=present
+      with_items:
+        -  openjdk-9-jre-headless
