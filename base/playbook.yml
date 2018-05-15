@@ -1,5 +1,6 @@
 ---
 - hosts: centos
+  tags: centos_base
   become: yes
 
   tasks:
@@ -11,6 +12,7 @@
         - kernel-headers
 
 - hosts: ubuntu
+  tags: centos_base
   become: yes
 
   tasks:
