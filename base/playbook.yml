@@ -19,4 +19,4 @@
     - name: Install Dev Tools
       apt: name={{ item }} state=present
       with_items:
-        -  openjdk-9-jre-headless
+        -  openjdk-11-jdk
