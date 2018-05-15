@@ -12,7 +12,7 @@
         - kernel-headers
 
 - hosts: ubuntu
-  tags: centos_base
+  tags: ubuntu_base
   become: yes
 
   tasks:
