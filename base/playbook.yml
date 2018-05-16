@@ -4,9 +4,10 @@
   become: yes
 
   tasks:
-    - name: Install Dev Tools
-      yum: name={{ item }} state=present
-      with_items:
+
+  - name: Install Dev Tools
+    yum: name={{ item }} state=present
+    with_items:
         - gcc
         - gcc-c++
         - kernel-headers
@@ -22,3 +23,4 @@
         -  openjdk-11-jdk
         -  sqlite3
         -  libsqlite3-dev
+        -  ant
