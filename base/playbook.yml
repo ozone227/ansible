@@ -4,7 +4,6 @@
   become: yes
 
   tasks:
-
   - name: Install Dev Tools
     yum: name={{ item }} state=present
     with_items:
@@ -25,3 +24,4 @@
         -  libsqlite3-dev
         -  ant
         -  r-base-core
+        -  python-pyodbc
