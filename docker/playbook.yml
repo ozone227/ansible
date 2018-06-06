@@ -14,4 +14,4 @@
 
     - name: Install PIP Modules
       pip:
-      name: docker-py docker-compose
+        name: docker-py docker-compose
