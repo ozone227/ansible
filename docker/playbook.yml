@@ -3,4 +3,15 @@
   become: yes
 
   tasks:
+
+    - name: Install docker
+      yum: name={{ item }} state=present
+      with_items:
+        - docker
+        - docker-client
+        - docker-python
+        - docker-unit-test
+
+    - name: Install PIP Modules
+      pip:
       name: docker-py docker-compose
