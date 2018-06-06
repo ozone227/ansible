@@ -7,7 +7,6 @@
       yum: name={{ item }} state=present
       with_items:
         - docker
-        - docker-python
         - docker-unit-test
 
     - name: Install PIP Modules
