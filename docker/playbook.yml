@@ -2,16 +2,14 @@
 - hosts: docker
   become: yes
 
-  tasks:
+    tasks:
+      - name: Install Docker
+        yum: name={{ item }} state=present
+        with_items:
+          - docker
+          - docker-python
+          - docker-unit-test
 
-    - name: Install docker
-      yum: name={{ item }} state=present
-      with_items:
-        - docker
-        - docker-client
-        - docker-python
-        - docker-unit-test
-
-    - name: Install PIP Modules
-      pip:
-        name: docker-py docker-compose
+      - name: Install PIP Modules
+        pip:
+          name: docker-py docker-compose
