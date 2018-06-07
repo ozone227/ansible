@@ -12,7 +12,7 @@
 
     - name: Install Docker Engine
       yum:
-        name: docker-engine-17.05.0.ce-1
+        name: docker-engine-17.05.0.ce-1.el7.centos
         state: present
 
     - name: Install PIP Modules
