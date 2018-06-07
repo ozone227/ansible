@@ -18,4 +18,4 @@
 
     - name: Install PIP Modules
       pip:
-        name: docker-py docker-compose
+       name: "docker-compose==1.12.0"
