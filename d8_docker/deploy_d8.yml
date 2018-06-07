@@ -1,0 +1,23 @@
+---
+- hosts: docker
+  become: yes
+
+  tasks:
+    - name: Create MySQL Container
+      docker_container:
+        name: d8-mysql
+        image: mysql
+        state: started
+        env:
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+
+    - name: Create Drupal 8 Container
+      docker_container:
+        name: d8-drupal
+        image: drupal
+        ports:
+          - "8080:80"
+        links:
+          - "d8-mysql:mysql"
+        state: started
