@@ -16,6 +16,12 @@
         name: docker-engine-17.05.0.ce-1.el7.centos
         state: present
 
+    - name: Start Docker engine
+      service:
+        name: docker
+        state: started
+
+
     - name: Install PIP Modules
       pip:
        name: "docker-compose==1.12.0"
