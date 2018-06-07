@@ -3,11 +3,17 @@
   become: yes
 
   tasks:
-    - name: Install Docker
-      yum: name={{ item }} state=present
-      with_items:
-        - docker
-        - docker-unit-test
+    - name: Add Docker Repository
+      yum_repository:
+        name: docker
+        description: Centos7 Docker Repository
+        baseurl: https://yum.dockerproject.org/repo/main/centos/7
+        enabled: yes
+
+    - name: Install Docker Engine
+      yum:
+        name: docker-engine-17.05.0.ce-1
+        state: present
 
     - name: Install PIP Modules
       pip:
