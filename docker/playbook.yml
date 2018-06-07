@@ -9,6 +9,7 @@
         description: Centos7 Docker Repository
         baseurl: https://yum.dockerproject.org/repo/main/centos/7
         enabled: yes
+        gpgcheck: no
 
     - name: Install Docker Engine
       yum:
