@@ -11,6 +11,7 @@
         env:
           MYSQL_USER: root
           MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
 
     - name: Create Drupal 8 Container
       docker_container:

@@ -21,7 +21,6 @@
         name: docker
         state: started
 
-
     - name: Install PIP Modules
       pip:
        name: "docker-compose==1.12.0"
