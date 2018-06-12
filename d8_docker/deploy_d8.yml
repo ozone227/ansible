@@ -9,9 +9,11 @@
         image: mysql
         state: started
         env:
-          MYSQL_USER: root
-          MYSQL_PASSWORD: password
           MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: drupal
+          MYSQL_USER: drupal
+          MYSQL_PASSWORD: drupal
+
 
     - name: Create Drupal 8 Container
       docker_container:
