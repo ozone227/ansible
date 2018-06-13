@@ -22,7 +22,7 @@
         name: d8-drupal
         image: drupal
         ports:
-          - "8080:80"
+          - 8080:80
         links:
-          - "d8-mysql:mysql"
+          - d8-mysql:mysql:5.7
         state: started
