@@ -9,7 +9,7 @@
         image: mysql
         state: started
         ports:
-         - 3306
+         - 3306:3306
         env:
           MYSQL_ROOT_PASSWORD: drupal
           MYSQL_DATABASE: drupal
