@@ -6,8 +6,7 @@
     - name: Create MySQL Container
       docker_container:
         name: d8-mysql
-        image: mysql
-        tags: 5.7
+        image: mysql:5.7
         state: started
         ports:
          - 3306:3306
