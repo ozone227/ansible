@@ -8,6 +8,7 @@
       with_items:
         - python
         - python-devel
+        - python-setuptools
 
     - name: Install PIP
       easy_install:
